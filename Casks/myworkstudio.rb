@@ -1,6 +1,6 @@
 cask "myworkstudio" do
-  version "1.4.0"
-  sha256 "90ac3c73d1dfd9d9466c801c01ba62804955599ec3bc1cafdb2b9454f26f7a41"
+  version "1.4.1"
+  sha256 "d0a977c2d391842e9ee2c05a6b8a217e5a88050f8ce6937f821458acad566cea"
 
   url "https://github.com/jjunhaa0211/MyWorkStudio/releases/download/v#{version}/MyWorkStudio-v#{version}.zip"
   name "MyWorkStudio"
