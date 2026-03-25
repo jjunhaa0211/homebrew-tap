@@ -1,6 +1,6 @@
 cask "doffice" do
-  version "3.0.3"
-  sha256 "ea293d77ea352b103bedc8f5074c8dfb0e3cbf38b5d8bca67279ca4d4e7a5716"
+  version "3.0.4"
+  sha256 "dcb720a72efb91c0da9f1e9b5241d4bdbef59788249776df01723dea3fdcdab5"
 
   url "https://github.com/jjunhaa0211/Doffice/releases/download/v#{version}/Doffice-v#{version}.zip"
   name "Doffice"
