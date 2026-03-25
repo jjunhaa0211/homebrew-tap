@@ -1,6 +1,6 @@
 cask "myworkstudio" do
-  version "3.1.0"
-  sha256 "97d55e3a1757065c6feca45b1b8cc8562a723b2f6586bb6cf55c0afaf4ec441b"
+  version "3.2.0"
+  sha256 "5c8d517ada5ea195cc9b691e1c6593c42f1311956459f0d1d6ad54f007af4f51"
 
   url "https://github.com/jjunhaa0211/Doffice/releases/download/v#{version}/Doffice-v#{version}.zip"
   name "Doffice (formerly MyWorkStudio)"
