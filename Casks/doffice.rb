@@ -1,6 +1,6 @@
 cask "doffice" do
-  version "3.2.1"
-  sha256 "6c80fb999d003da2abac3d1fe946007b4e71260cf26e023830948eb2083da7f9"
+  version "0.0.21"
+  sha256 "a2c6583ea552a7f1804bfb0f4008979746738cac8656b017ba3c26c7ef240b41"
 
   url "https://github.com/jjunhaa0211/Doffice/releases/download/v#{version}/Doffice-v#{version}.zip"
   name "Doffice"
@@ -16,5 +16,6 @@ cask "doffice" do
     "~/Library/Preferences/com.junha.doffice.plist",
     "~/Library/Preferences/com.junha.workman.plist",
     "~/Library/Application Support/WorkMan",
+    "~/Library/Caches/com.junha.doffice",
   ]
 end
