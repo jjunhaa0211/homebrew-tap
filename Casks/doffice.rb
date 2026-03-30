@@ -2,7 +2,7 @@ cask "doffice" do
   version "0.0.32"
   sha256 :no_check
 
-  url "https://github.com/jjunhaa0211/Doffice/releases/download/v#{version}/Doffice-v#{version}.zip"
+  url "https://github.com/jjunhaa0211/Doffice/releases/download/v#{version}/Doffice.app.zip"
   name "Doffice"
   name "도피스"
   desc "Claude Code 세션을 시각적으로 관리하는 macOS 네이티브 앱"
