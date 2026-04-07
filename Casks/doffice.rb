@@ -1,5 +1,5 @@
 cask "doffice" do
-  version "0.0.46"
+  version "0.0.49"
   sha256 :no_check
 
   url "https://github.com/jjunhaa0211/Doffice/releases/download/v#{version}/Doffice-v#{version}.zip"
