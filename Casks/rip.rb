@@ -18,6 +18,16 @@ cask "rip" do
 
   app "RIP.app"
 
+  # 공증(notarization)을 못 하는 앱이라 격리 딱지가 붙은 채로 열면
+  # macOS 15+ 는 실행을 막는 데 그치지 않고 **앱을 지워 버린다**.
+  # (2026-08-04 실제로 확인: open 3초 뒤 /Applications 에서 사라짐)
+  # 그래서 설치 직후 딱지를 떼어 둔다. 사용자가 매번 터미널을 치지 않아도 되게.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/RIP.app"],
+                   sudo: false
+  end
+
   # 앱을 지울 때 같이 지울 것들.
   # 명단과 기록은 사용자 데이터이므로 `brew uninstall --zap` 을 명시적으로 했을 때만 지운다.
   zap trash: [
@@ -29,14 +39,15 @@ cask "rip" do
   ]
 
   caveats <<~EOS
-    RIP은 Apple 개발자 인증서로 서명되어 있지 않습니다.
-    처음 열 때 막히면 아래 중 하나로 여세요.
+    RIP은 Apple 개발자 인증서로 서명·공증되어 있지 않습니다(개인 프로젝트라 공증 계정이 없습니다).
+    설치할 때 격리 딱지를 떼어 두었으므로 그냥 열면 됩니다.
 
-      1) 앱을 우클릭 → 열기 → 다시 열기
-      2) xattr -dr com.apple.quarantine "#{appdir}/RIP.app"
+    혹시 "손상되었다"며 안 열리면:
 
-    격리 딱지 없이 바로 깔고 싶다면:
+      xattr -dr com.apple.quarantine "#{appdir}/RIP.app"
 
-      brew install --cask --no-quarantine rip
+    ※ macOS 15부터는 공증 안 된 앱을 격리 딱지가 붙은 채로 열면
+       실행이 막히는 데서 끝나지 않고 앱이 지워질 수 있습니다.
+       DMG를 직접 내려받으셨다면 **열기 전에** 위 명령을 먼저 실행하세요.
   EOS
 end
