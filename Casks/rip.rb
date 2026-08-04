@@ -1,6 +1,6 @@
 cask "rip" do
-  version "1.1.0"
-  sha256 "8212ffb1cab1b085fc7334f20248c282d4270b4bbea37aa15a1c5c17179fa433"
+  version "1.2.0"
+  sha256 "df64cb6ecf1796156a08afdae4331b946d5ea9c8f658ab1a94063307fc4f3d97"
 
   url "https://github.com/jjunhaa0211/RIP/releases/download/v#{version}/RIP-#{version}.dmg",
       verified: "github.com/jjunhaa0211/RIP/"
